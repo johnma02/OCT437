@@ -11,6 +11,7 @@ namespace OCTOBER.Client.Services
     {
         private string RestAPI = "api/Lookup";
         protected HttpClient Http { get; set; }
+
         protected JsonSerializerOptions options = new JsonSerializerOptions()
         {
             ReferenceHandler = ReferenceHandler.Preserve,
@@ -25,8 +26,6 @@ namespace OCTOBER.Client.Services
         public async Task<List<CourseDTO>> GetCourses()
         {
             return await Http.GetFromJsonAsync<List<CourseDTO>>($"api/Course/Get", options);
-
         }
     }
-
 }

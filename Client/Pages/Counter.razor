@@ -9,7 +9,7 @@
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 <TelerikDropDownList Data="@lstCourse"
-@bind-Value="@SelectedCourse"
+                     @bind-Value="@SelectedCourse"
                      TextField="@nameof(CourseDTO.Description)"
                      ValueField="@nameof(CourseDTO.CourseNo)"
                      DefaultText="Select a course..."

@@ -9,13 +9,11 @@ using OCTOBER.Client.Services;
 
 namespace OCTOBER.Client.Pages
 {
-    public partial class Counter: ComponentBase
+    public partial class Counter : ComponentBase
     {
-        [Inject]
-        protected HttpClient Http { get; set; }
+        [Inject] protected HttpClient Http { get; set; }
 
-        [Inject]
-        protected LookupService _LookupService { get; set; }
+        [Inject] protected LookupService _LookupService { get; set; }
 
         List<CourseDTO>? lstCourse { get; set; }
 
@@ -37,14 +35,11 @@ namespace OCTOBER.Client.Pages
 
         protected override async Task OnInitializedAsync()
         {
-         //   lstCourse =  await Http.GetFromJsonAsync<List<CourseDTO>>($"api/Course/Get", options);
+            //   lstCourse =  await Http.GetFromJsonAsync<List<CourseDTO>>($"api/Course/Get", options);
 
             lstCourse = await _LookupService.GetCourses();
 
             currentCount = 17;
         }
-
-
-
     }
 }

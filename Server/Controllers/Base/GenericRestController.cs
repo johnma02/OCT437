@@ -10,6 +10,6 @@ namespace OCTOBER.Server.Controllers.Base
         Task<IActionResult> Get(int KeyVal);
         Task<IActionResult> Post([FromBody] T _T);
 
-         Task<IActionResult> Put([FromBody] T _T);
+        Task<IActionResult> Put([FromBody] T _T);
     }
 }
